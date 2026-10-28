@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Яндекс в Safari — тест</title>
+<style>
+  :root{
+    --bg:#f2f2f7; --card:#fff; --text:#1c1c1e; --muted:#6b6b70;
+    --accent:#fc3f1d; --accent-text:#fff; --line:#e3e3e8; --btn2:#eceaff; --btn2-text:#3b2fb8;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#000; --card:#1c1c1e; --text:#f2f2f7; --muted:#9a9aa0;
+      --line:#2c2c2e; --btn2:#23213a; --btn2-text:#b9b2ff;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font:17px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+    min-height:100dvh; display:flex; align-items:center; justify-content:center;
+    padding:24px 16px; padding:max(24px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom));
+  }
+  .card{
+    background:var(--card); width:100%; max-width:380px; border-radius:20px;
+    padding:28px 22px; box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.06);
+  }
+  h1{font-size:21px; line-height:1.25; margin:0 0 6px; letter-spacing:-.02em}
+  .sub{color:var(--muted); font-size:14px; margin:0 0 22px}
+  a.btn{
+    display:block; text-decoration:none; text-align:center; font-weight:600;
+    padding:15px 18px; border-radius:13px; margin:10px 0; font-size:17px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  a.primary{background:var(--accent); color:var(--accent-text)}
+  a.secondary{background:var(--btn2); color:var(--btn2-text)}
+  .step{display:flex; gap:12px; align-items:flex-start; margin:16px 2px 0; font-size:14px; color:var(--muted)}
+  .n{flex:0 0 22px; height:22px; border-radius:50%; background:var(--line); color:var(--text);
+     display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700}
+  .note{margin-top:22px; padding-top:16px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted)}
+</style>
+</head>
+<body>
+  <main class="card">
+    <h1>Поиск Яндекса в Safari</h1>
+    <p class="sub">Сделать Яндекс поиском по умолчанию в Safari за два шага.</p>
+
+    <a class="btn primary" href="https://www.icloud.com/shortcuts/58097736baba4aa6a0c49a9af3af8b39">① Добавить команду</a>
+    <a class="btn secondary" href="shortcuts://run-shortcut?name=%D0%98%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%C2%ABSafari%C2%BB%201">② Включить</a>
+
+    <div class="step"><span class="n">1</span><span>Нажми «Добавить команду» и подтверди «Добавить» в приложении «Команды».</span></div>
+    <div class="step"><span class="n">2</span><span>Вернись сюда, нажми «Включить» — поиск в Safari сменится на Яндекс.</span></div>
+
+    <p class="note">Тестовая страница. Проверяет, открывается ли команда сразу в приложении (без промежуточной страницы iCloud) при нажатии ссылки. Требуется iOS 18.4+ и обычный Safari (не встроенный браузер Telegram/Instagram).</p>
+  </main>
+</body>
+</html>
